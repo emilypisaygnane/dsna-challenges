@@ -3,7 +3,7 @@ class Stack {
     this.stack = [];
   }
 
-  //methods
+  // methods
   push(element) {
     this.stack.push(element);
   }
@@ -16,21 +16,21 @@ class Stack {
     return this.stack[this.stack.length - 1];
   }
 
-  isEmpty() {
-    return this.stack.length === 0;
-  }
+  //isEmpty() {
+  //  return this.stack.length === 0;
+  //}
 
-  size() {
-    return this.stack.length;
-  }
+  //size() {
+  //  return this.stack.length;
+  //}
 
-  clear() {
-    this.stack = [];
-  }
-  
-  print() {
-    console.log(this.stack.toString());
-  }
+  // clear() {
+  //  this.stack = [];
+  //}
+
+  //print() {
+  //  console.log(this.stack.toString());
+  //}
 }
 
 const stack = new Stack();
