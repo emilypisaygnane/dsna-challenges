@@ -1,5 +1,7 @@
 # Data Structures & Algorithms
 
+### Day 2
+
 ## CH-01-Stack
 
 Stacks are first-in, last-out data structures. Think of them like a stack of rocks, you can only add a rock on top, or take off the top rock. Optionally, you can also "peek" at what the top rock is.
