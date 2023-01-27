@@ -37,8 +37,8 @@ class Queue {
   constructor() {
     this.queue = [];
   }
-  enqueue(item) {
-    this.queue.push(item);
+  enqueue(element) {
+    this.queue.push(element);
   }
   dequeue() {
     return this.queue.shift();
@@ -72,4 +72,4 @@ console.log('Printing stack before reversal: ', stack.print());
 //Reverses the stack.
 reverse(stack);
 //Prints the stack after the reversal.
-console.log('Printing stack after reversal: ', stack.print());
+console.log('Printing stack after reversal: ', stack.print);

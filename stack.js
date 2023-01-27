@@ -1,6 +1,6 @@
 class Stack {
-  constructor() {
-    this.stack = [];
+  constructor(initial = []) {
+    if (initial) this.stack = initial;
   }
 
   // methods
@@ -16,21 +16,21 @@ class Stack {
     return this.stack[this.stack.length - 1];
   }
 
-  //isEmpty() {
-  //  return this.stack.length === 0;
-  //}
+  isEmpty() {
+    return this.stack.length === 0;
+  }
 
-  //size() {
-  //  return this.stack.length;
-  //}
+  size() {
+    return this.stack.length;
+  }
 
-  // clear() {
-  //  this.stack = [];
-  //}
+   clear() {
+    this.stack = [];
+  }
 
-  //print() {
-  //  console.log(this.stack.toString());
-  //}
+  print() {
+    return this.stack.toString();
+  }
 }
 
 const stack = new Stack();
@@ -45,3 +45,5 @@ console.log(stack.pop()); // 'llama'
 console.log(stack.peek()); // 'fox'
 console.log(stack.pop()); // 'fox'
 console.log(stack.pop()); // null
+
+module.exports = { Stack };
