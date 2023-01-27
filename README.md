@@ -1,4 +1,6 @@
-# dsna-challenges
+# Data Structures & Algorithms
+
+### Day 2
 
 ## CH-01-Stack
 
