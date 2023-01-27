@@ -1,4 +1,4 @@
-# dsna-challenges
+# Data Structures & Algorithms
 
 ## CH-01-Stack
 
