@@ -1,23 +1,55 @@
-const { Stack } = require('./stack.js');
+const { Stack } = require('stack.js');
+const { Queue } = require('queue.js');
+const { Reversal } = require('reverseStack.js');
 
-describe('Stack', () => {
-  it('should add to the front', () => {
-    const spy = jest.spyOn(global.console, 'log');
-    const myStructure = new Stack([4, 6, 8]);
-    myStructure.push(3);
-    myStructure.print();
-    // expect(spy).toHaveBeenCalledWith('3,4,6,8');
-    expect(myStructure.print()).toEqual('3,4,6,8');
+describe('CH-01', () => {
+  test('add item to list', () => {
+    const newStack = new Stack();
+    newStack.push(1);
+    newStack.push(1);
+    newStack.push(1);
+    expect(newStack.readableList).toEqual('1,1,1');
   });
 
-  it('should add to the back', () => {
-    const myStructure = new Stack([4, 6, 8]);
-    myStructure.pop(3);
-    expect(myStructure.print).toEqual('4,6,8,3');
+  test('delete items off the list', () => {
+    const newStack = new Stack([1, 2, 3, 4]);
+    newStack.pop();
+    expect(newStack.readableList).toEqual('1,2,3');
   });
 
-  it('should return the count', () => {
-    const myStructure = new Stack([4, 6, 8]);
-    expect(myStructure.count).toBe(3);
+  test('return the last item in the list', () => {
+    const newStack = new Stack([1, 2, 3, 4]);
+    const peekedItem = newStack.peek();
+    expect(peekedItem).toEqual('4');
+  });
+});
+
+describe('CH-02', () => {
+  test('adds item into queue', () => {
+    const newQueue = new Queue();
+    newQueue.enqueue(1);
+    newQueue.enqueue(2);
+    newQueue.enqueue(3);
+    newQueue.enqueue(4);
+    expect(newQueue.readableList).toEqual('1,2,3,4');
+  });
+
+  test('takes out oldest item in the list', () => {
+    const newQueue = new Queue([1, 2, 3, 4]);
+    newQueue.dequeue();
+    expect(newQueue.readableList).toEqual('2,3,4');
+  });
+
+  test('checks if theres another item left in queue', () => {
+    const newQueue = new Queue([1, 2]);
+    expect(newQueue.hasNext()).toEqual(true);
+  });
+});
+
+describe('CH-04', () => {
+  test('reverses an array', () => {
+    const Array = new Reversal([1, 2, 3, 4]);
+    const newArr = Array.reverse();
+    expect(newArr).toEqual([4, 3, 2, 1]);
   });
 });
