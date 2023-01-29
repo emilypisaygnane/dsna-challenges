@@ -2,7 +2,7 @@ const { Stack } = require('stack.js');
 const { Queue } = require('queue.js');
 const { Reversal } = require('reverseStack.js');
 
-describe('CH-01', () => {
+describe('Stack', () => {
   test('add item to list', () => {
     const newStack = new Stack();
     newStack.push(1);
@@ -24,7 +24,7 @@ describe('CH-01', () => {
   });
 });
 
-describe('CH-02', () => {
+describe('Queue', () => {
   test('adds item into queue', () => {
     const newQueue = new Queue();
     newQueue.enqueue(1);
@@ -46,7 +46,7 @@ describe('CH-02', () => {
   });
 });
 
-describe('CH-04', () => {
+describe('Reverse Stack', () => {
   test('reverses an array', () => {
     const Array = new Reversal([1, 2, 3, 4]);
     const newArr = Array.reverse();
