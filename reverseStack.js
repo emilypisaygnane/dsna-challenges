@@ -1,75 +1,16 @@
-class Stack {
-  constructor() {
-    this.stack = [];
+class Reversal {
+  #list = [];
+  constructor(initial) {
+    if (initial) this.#list = initial;
   }
 
-  // methods
-  push(element) {
-    this.stack.push(element);
-  }
-
-  pop() {
-    return this.stack.pop();
-  }
-
-  peek() {
-    return this.stack[this.stack.length - 1];
-  }
-
-  isEmpty() {
-    return this.stack.length === 0;
-  }
-
-  size() {
-    return this.stack.length;
-  }
-
-   clear() {
-    this.stack = [];
-  }
-
-  print() {
-    console.log(this.stack.toString());
+  reverse() {
+    const newArr = this.#list.reverse();
+    return newArr;
   }
 }
 
-class Queue {
-  constructor() {
-    this.queue = [];
-  }
-  enqueue(element) {
-    this.queue.push(element);
-  }
-  dequeue() {
-    return this.queue.shift();
-  }
-  hasNext() {
-    return this.queue.length > 0;
-  }
-  isEmpty() {
-    return this.queue.length == 0;
-  }
-}
+const reversal = new Reversal(['My name is Dug', 'There', 'Hi' ]);
+console.log(reversal.reverse()); // returns ['Hi', 'There', 'My name is Dug']
 
-function reverse(stack){ 
-  const queue = new Queue();
-  while(!stack.isEmpty()){
-     queue.enqueue(stack.pop());
-  } 
-  
-  while(!queue.isEmpty()){
-     stack.push(queue.dequeue());
-  }
-}
-//Creates a new stack.
-const stack = new Stack(); 
-
-stack.push('My name is Dug');
-stack.push('There');
-stack.push('Hi'); 
-//Prints the stack before the reversal.
-console.log('Printing stack before reversal: ', stack.print());
-//Reverses the stack.
-reverse(stack);
-//Prints the stack after the reversal.
-console.log('Printing stack after reversal: ', stack.print);
+module.exports = { Reversal };
